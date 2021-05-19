@@ -4,7 +4,7 @@
 #
 Name     : R-insight
 Version  : 0.14.0
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/insight_0.14.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/insight_0.14.0.tar.gz
 Summary  : Easy Access to Model Information for Various Model Objects
