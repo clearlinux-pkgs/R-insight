@@ -4,7 +4,7 @@
 #
 Name     : R-insight
 Version  : 0.14.5
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/insight_0.14.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/insight_0.14.5.tar.gz
 Summary  : Easy Access to Model Information for Various Model Objects
@@ -26,10 +26,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1634585094
+export SOURCE_DATE_EPOCH=1641037672
 
 %install
-export SOURCE_DATE_EPOCH=1634585094
+export SOURCE_DATE_EPOCH=1641037672
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
