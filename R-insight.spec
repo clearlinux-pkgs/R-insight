@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-insight
-Version  : 0.19.1
-Release  : 50
-URL      : https://cran.r-project.org/src/contrib/insight_0.19.1.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/insight_0.19.1.tar.gz
+Version  : 0.19.2
+Release  : 51
+URL      : https://cran.r-project.org/src/contrib/insight_0.19.2.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/insight_0.19.2.tar.gz
 Summary  : Easy Access to Model Information for Various Model Objects
 Group    : Development/Tools
 License  : GPL-3.0
@@ -23,17 +23,19 @@ access to information contained in various R models, like model
 
 %prep
 %setup -q -n insight
-cd %{_builddir}/insight
+pushd ..
+cp -a insight buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679330131
+export SOURCE_DATE_EPOCH=1685643796
 
 %install
-export SOURCE_DATE_EPOCH=1679330131
+export SOURCE_DATE_EPOCH=1685643796
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -71,6 +73,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc . || :
 
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -111,7 +114,10 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/html/00Index.html
 /usr/lib64/R/library/insight/html/R.css
 /usr/lib64/R/library/insight/tests/testthat.R
-/usr/lib64/R/library/insight/tests/testthat/helper.R
+/usr/lib64/R/library/insight/tests/testthat/_snaps/export_table.md
+/usr/lib64/R/library/insight/tests/testthat/_snaps/format_table.md
+/usr/lib64/R/library/insight/tests/testthat/_snaps/format_table_ci.md
+/usr/lib64/R/library/insight/tests/testthat/_snaps/mipo.md
 /usr/lib64/R/library/insight/tests/testthat/test-BayesFactorBF.R
 /usr/lib64/R/library/insight/tests/testthat/test-FE-formula.R
 /usr/lib64/R/library/insight/tests/testthat/test-GLMMadaptive.R
@@ -210,11 +216,12 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/tests/testthat/test-logistf.R
 /usr/lib64/R/library/insight/tests/testthat/test-logitr.R
 /usr/lib64/R/library/insight/tests/testthat/test-marginaleffects.R
+/usr/lib64/R/library/insight/tests/testthat/test-mclogit.R
 /usr/lib64/R/library/insight/tests/testthat/test-metaBMA.R
 /usr/lib64/R/library/insight/tests/testthat/test-metafor.R
 /usr/lib64/R/library/insight/tests/testthat/test-metaplus.R
 /usr/lib64/R/library/insight/tests/testthat/test-mhurdle.R
-/usr/lib64/R/library/insight/tests/testthat/test-mixed.R
+/usr/lib64/R/library/insight/tests/testthat/test-mipo.R
 /usr/lib64/R/library/insight/tests/testthat/test-mlogit.R
 /usr/lib64/R/library/insight/tests/testthat/test-mmrm.R
 /usr/lib64/R/library/insight/tests/testthat/test-model_data.R
@@ -225,6 +232,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/tests/testthat/test-n_parameters_rank-deficiency.R
 /usr/lib64/R/library/insight/tests/testthat/test-namespace.R
 /usr/lib64/R/library/insight/tests/testthat/test-negbin.R
+/usr/lib64/R/library/insight/tests/testthat/test-nestedLogit.R
 /usr/lib64/R/library/insight/tests/testthat/test-nlmer.R
 /usr/lib64/R/library/insight/tests/testthat/test-null_model.R
 /usr/lib64/R/library/insight/tests/testthat/test-object_has_helpers.R
