@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-insight
-Version  : 0.19.2
-Release  : 52
-URL      : https://cran.r-project.org/src/contrib/insight_0.19.2.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/insight_0.19.2.tar.gz
+Version  : 0.19.3
+Release  : 53
+URL      : https://cran.r-project.org/src/contrib/insight_0.19.3.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/insight_0.19.3.tar.gz
 Summary  : Easy Access to Model Information for Various Model Objects
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685643796
+export SOURCE_DATE_EPOCH=1688057042
 
 %install
-export SOURCE_DATE_EPOCH=1685643796
+export SOURCE_DATE_EPOCH=1688057042
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -118,6 +118,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/tests/testthat/_snaps/format_table.md
 /usr/lib64/R/library/insight/tests/testthat/_snaps/format_table_ci.md
 /usr/lib64/R/library/insight/tests/testthat/_snaps/mipo.md
+/usr/lib64/R/library/insight/tests/testthat/_snaps/windows/format_table.md
 /usr/lib64/R/library/insight/tests/testthat/test-BayesFactorBF.R
 /usr/lib64/R/library/insight/tests/testthat/test-FE-formula.R
 /usr/lib64/R/library/insight/tests/testthat/test-GLMMadaptive.R
@@ -134,6 +135,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/tests/testthat/test-bigglm.R
 /usr/lib64/R/library/insight/tests/testthat/test-blmer.R
 /usr/lib64/R/library/insight/tests/testthat/test-brms.R
+/usr/lib64/R/library/insight/tests/testthat/test-brms_aterms.R
 /usr/lib64/R/library/insight/tests/testthat/test-censReg.R
 /usr/lib64/R/library/insight/tests/testthat/test-cgam.R
 /usr/lib64/R/library/insight/tests/testthat/test-check_if_installed.R
@@ -187,6 +189,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/tests/testthat/test-get_predicted-iv.R
 /usr/lib64/R/library/insight/tests/testthat/test-get_predicted.R
 /usr/lib64/R/library/insight/tests/testthat/test-get_priors.R
+/usr/lib64/R/library/insight/tests/testthat/test-get_random.R
 /usr/lib64/R/library/insight/tests/testthat/test-get_residuals.R
 /usr/lib64/R/library/insight/tests/testthat/test-get_varcov.R
 /usr/lib64/R/library/insight/tests/testthat/test-get_variance.R
@@ -238,7 +241,6 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/tests/testthat/test-object_has_helpers.R
 /usr/lib64/R/library/insight/tests/testthat/test-offset.R
 /usr/lib64/R/library/insight/tests/testthat/test-ols.R
-/usr/lib64/R/library/insight/tests/testthat/test-panelr.R
 /usr/lib64/R/library/insight/tests/testthat/test-plm.R
 /usr/lib64/R/library/insight/tests/testthat/test-polr.R
 /usr/lib64/R/library/insight/tests/testthat/test-proportion_response.R
