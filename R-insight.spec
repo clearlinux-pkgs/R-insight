@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-insight
-Version  : 0.19.4
-Release  : 54
-URL      : https://cran.r-project.org/src/contrib/insight_0.19.4.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/insight_0.19.4.tar.gz
+Version  : 0.19.5
+Release  : 55
+URL      : https://cran.r-project.org/src/contrib/insight_0.19.5.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/insight_0.19.5.tar.gz
 Summary  : Easy Access to Model Information for Various Model Objects
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,10 +32,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1694449592
+export SOURCE_DATE_EPOCH=1694624292
 
 %install
-export SOURCE_DATE_EPOCH=1694449592
+export SOURCE_DATE_EPOCH=1694624292
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
