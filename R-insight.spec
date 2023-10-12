@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-insight
-Version  : 0.19.5
-Release  : 55
-URL      : https://cran.r-project.org/src/contrib/insight_0.19.5.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/insight_0.19.5.tar.gz
+Version  : 0.19.6
+Release  : 56
+URL      : https://cran.r-project.org/src/contrib/insight_0.19.6.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/insight_0.19.6.tar.gz
 Summary  : Easy Access to Model Information for Various Model Objects
 Group    : Development/Tools
 License  : GPL-3.0
@@ -32,19 +32,19 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1694624292
+export SOURCE_DATE_EPOCH=1697126244
 
 %install
-export SOURCE_DATE_EPOCH=1694624292
+export SOURCE_DATE_EPOCH=1697126244
 rm -rf %{buildroot}
-export LANG=C.UTF-8
-export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
-export AR=gcc-ar
-export RANLIB=gcc-ranlib
-export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
+LANG=C.UTF-8
+CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
+FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -O3 -flto -fno-semantic-interposition "
+FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -O3 -flto -fno-semantic-interposition "
+CXXFLAGS="$CLEAR_INTERMEDIATE_CXXFLAGS -O3 -flto -fno-semantic-interposition "
+AR=gcc-ar
+RANLIB=gcc-ranlib
+LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
 
 mkdir -p ~/.R
@@ -140,6 +140,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/tests/testthat/test-cgam.R
 /usr/lib64/R/library/insight/tests/testthat/test-check_if_installed.R
 /usr/lib64/R/library/insight/tests/testthat/test-clean_names.R
+/usr/lib64/R/library/insight/tests/testthat/test-clean_parameters.R
 /usr/lib64/R/library/insight/tests/testthat/test-clm.R
 /usr/lib64/R/library/insight/tests/testthat/test-clm2.R
 /usr/lib64/R/library/insight/tests/testthat/test-clmm.R
