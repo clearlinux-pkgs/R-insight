@@ -6,10 +6,10 @@
 # autospec commit: fbcebd0
 #
 Name     : R-insight
-Version  : 0.20.0
-Release  : 64
-URL      : https://cran.r-project.org/src/contrib/insight_0.20.0.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/insight_0.20.0.tar.gz
+Version  : 0.20.1
+Release  : 65
+URL      : https://cran.r-project.org/src/contrib/insight_0.20.1.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/insight_0.20.1.tar.gz
 Summary  : Easy Access to Model Information for Various Model Objects
 Group    : Development/Tools
 License  : GPL-3.0
@@ -37,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1717513361
+export SOURCE_DATE_EPOCH=1718298769
 
 %install
-export SOURCE_DATE_EPOCH=1717513361
+export SOURCE_DATE_EPOCH=1718298769
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -124,6 +124,9 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/tests/testthat/_snaps/format_table_ci.md
 /usr/lib64/R/library/insight/tests/testthat/_snaps/mipo.md
 /usr/lib64/R/library/insight/tests/testthat/_snaps/windows/format_table.md
+/usr/lib64/R/library/insight/tests/testthat/download-model-failure/raw.github.com/easystats/circus/master/data/xyz.rda.R
+/usr/lib64/R/library/insight/tests/testthat/download-model-success/raw.github.com/easystats/circus/master/data/lm_0.rda.R
+/usr/lib64/R/library/insight/tests/testthat/setup.R
 /usr/lib64/R/library/insight/tests/testthat/test-BayesFactorBF.R
 /usr/lib64/R/library/insight/tests/testthat/test-FE-formula.R
 /usr/lib64/R/library/insight/tests/testthat/test-GLMMadaptive.R
@@ -161,6 +164,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/tests/testthat/test-crch.R
 /usr/lib64/R/library/insight/tests/testthat/test-crq.R
 /usr/lib64/R/library/insight/tests/testthat/test-data.frame.R
+/usr/lib64/R/library/insight/tests/testthat/test-download_model.R
 /usr/lib64/R/library/insight/tests/testthat/test-ellipses_info.R
 /usr/lib64/R/library/insight/tests/testthat/test-emmeans.R
 /usr/lib64/R/library/insight/tests/testthat/test-epiR.R
