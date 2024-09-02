@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : R-insight
-Version  : 0.20.3
-Release  : 67
-URL      : https://cran.r-project.org/src/contrib/insight_0.20.3.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/insight_0.20.3.tar.gz
+Version  : 0.20.4
+Release  : 68
+URL      : https://cran.r-project.org/src/contrib/insight_0.20.4.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/insight_0.20.4.tar.gz
 Summary  : Easy Access to Model Information for Various Model Objects
 Group    : Development/Tools
 License  : GPL-3.0
@@ -37,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1723815649
+export SOURCE_DATE_EPOCH=1725293516
 
 %install
-export SOURCE_DATE_EPOCH=1723815649
+export SOURCE_DATE_EPOCH=1725293516
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -305,4 +305,5 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/insight/tests/testthat/test-utilities.R
 /usr/lib64/R/library/insight/tests/testthat/test-vgam.R
 /usr/lib64/R/library/insight/tests/testthat/test-vglm.R
+/usr/lib64/R/library/insight/tests/testthat/test-weightit.R
 /usr/lib64/R/library/insight/tests/testthat/test-zeroinfl.R
