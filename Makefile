@@ -1,5 +1,5 @@
 PKG_NAME := R-insight
-URL = https://cran.r-project.org/src/contrib/insight_0.20.5.tar.gz
+URL = https://ftp.osuosl.org/pub/cran/src/contrib/insight_1.0.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
